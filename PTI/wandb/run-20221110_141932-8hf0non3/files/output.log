@@ -1,0 +1,21 @@
+Traceback (most recent call last):
+  File "scripts/latent_creators/e4e_latent_creator.py", line 43, in <module>
+    e4e_latent_creator = E4ELatentCreator()
+  File "scripts/latent_creators/e4e_latent_creator.py", line 19, in __init__
+    super().__init__('e4e', self.e4e_inversion_pre_process, use_wandb=use_wandb)
+  File "/workspace/PTI/scripts/latent_creators/base_latent_creator.py", line 48, in __init__
+    self.old_G = pickle.load(f)['G_ema'].cuda()
+  File "/opt/conda/lib/python3.8/site-packages/torch/nn/modules/module.py", line 463, in cuda
+    return self._apply(lambda t: t.cuda(device))
+  File "/opt/conda/lib/python3.8/site-packages/torch/nn/modules/module.py", line 359, in _apply
+    module._apply(fn)
+  File "/opt/conda/lib/python3.8/site-packages/torch/nn/modules/module.py", line 359, in _apply
+    module._apply(fn)
+  File "/opt/conda/lib/python3.8/site-packages/torch/nn/modules/module.py", line 359, in _apply
+    module._apply(fn)
+  [Previous line repeated 1 more time]
+  File "/opt/conda/lib/python3.8/site-packages/torch/nn/modules/module.py", line 381, in _apply
+    param_applied = fn(param)
+  File "/opt/conda/lib/python3.8/site-packages/torch/nn/modules/module.py", line 463, in <lambda>
+    return self._apply(lambda t: t.cuda(device))
+RuntimeError: CUDA error: out of memory

@@ -1,0 +1,10 @@
+
+Loading e4e over the pSp framework from checkpoint: ./pretrained_models/e4e_ffhq_encode.pt
+  0%|                                          | 0/10 [00:00<?, ?it/s]
+Setting up PyTorch plugin "bias_act_plugin"... Done.
+
+
+
+
+
+100%|█████████████████████████████████| 10/10 [00:10<00:00,  1.07s/it]
