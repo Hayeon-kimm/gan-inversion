@@ -37,7 +37,7 @@ docker run -it --name [컨테이너 이름] --gpus all -v [git clone한 디렉�
 |[mtcnn.tar.gz](https://drive.google.com/file/d/1tJ7ih-wbCO6zc3JhI_1ZGjmwXKKaPlja/view)|hyperstyle|
 |[ResNet-34 Model](https://github.com/yuval-alaluf/hyperstyle)|hyperstyle|
 
-'''
+```
 #[e4e train.py] train 할때마다 new 폴더가 생기므로 새로 학습시에 new 폴더를 삭제(rm -rf new)하고 시작해야합니다.
 CUDA_VISIBLE_DEVICES=[gpu_num] python scripts/train.py \
 --dataset_type ffhq_encode \
@@ -55,7 +55,7 @@ CUDA_VISIBLE_DEVICES=[gpu_num] python scripts/train.py \
 --batch_size 8 \
 --test_batch_size 4 \
 --test_workers 4 
-'''
+```
 
 e4e inference는 scripts/inference.py에서 gpu 번호를 변경할 수 있습니다.
 
