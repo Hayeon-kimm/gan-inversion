@@ -14,3 +14,11 @@ docker run -it --name [컨테이너 이름] --gpus all -v [git clone한 디렉�
 | ├  hyperstyle ||
 | ├  Dockerfile|Dockerfile for image building(stylegan2-ada) |
 | ├  pretrained_models|Folder containing all pretrained_models|
+
+| gan-inversion | Repository root folder |
+| ------------ | ---------------------- |
+| ├  encoder4editing ||
+| ├  PTI ||
+| ├  hyperstyle ||
+| ├  Dockerfile|Dockerfile for image building(stylegan2-ada) |
+| ├  pretrained_models|Folder containing all pretrained_models|
