@@ -17,7 +17,8 @@ gan-inversion|Repository root folder
 
 <br/>
 
-| First Header | Second Header |
-| ------------ | ------------- |
-| Content Cell | Content Cell  |
-| Content Cell | Content Cell  |
+| gan-inversion | Repository root folder |
+| ------------ | ---------------------- |
+| ├  encoder4editing | Content Cell  |
+| ├  PTI | Content Cell  |
+| ├  Dockerfile|Dockerfile for image building(stylegan2-ada) |
