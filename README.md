@@ -17,10 +17,12 @@ docker run -it --name [컨테이너 이름] --gpus all -v [git clone한 디렉�
 
 | File name | used for |
 | ------------ | ---------------------- |
-|[e4e_ffhq_encode.pt](https://drive.google.com/file/d/1cUv_reLE6k3604or78EranS7XzuVMWeO/view) |e4e|
-|[e4e_cars_encode.pt](https://drive.google.com/file/d/17faPqBce2m1AQeLCLHUVXaDfxMRU2QcV/view) |e4e|
-|[e4e_horse_encode.pt](https://drive.google.com/file/d/1TkLLnuX86B_BMo2ocYD0kX9kWh53rUVX/view) |e4e|
+|[e4e_ffhq_encode.pt](https://drive.google.com/file/d/1cUv_reLE6k3604or78EranS7XzuVMWeO/view) |e4e, PTI, hyperstyle|
+|[e4e_cars_encode.pt](https://drive.google.com/file/d/17faPqBce2m1AQeLCLHUVXaDfxMRU2QcV/view) |e4e, hyperstyle|
+|[e4e_horse_encode.pt](https://drive.google.com/file/d/1TkLLnuX86B_BMo2ocYD0kX9kWh53rUVX/view) |e4e, hyperstyle|
 |[e4e_church_encode.pt](https://drive.google.com/file/d/1-L0ZdnQLwtdy6-A_Ccgq5uNJGTqE7qBa/view)|e4e|
-|[stylegan2-ffhq-config-f.pt](https://drive.google.com/file/d/1EM87UquaoQmk17Q8d5kYIAHqu0dkYqdT/view)|e4e|
+|[stylegan2-ffhq-config-f.pt](https://drive.google.com/file/d/1EM87UquaoQmk17Q8d5kYIAHqu0dkYqdT/view)|e4e,PTI|
 |[model_ir_se50.pth](https://drive.google.com/file/d/1KW7bjndL3QG3sxBbZxreGHigcCCpsDgn/view)|e4e|
 |[moco_v2_800ep_pretrain.pt](https://drive.google.com/file/d/18rLcNGdteX5LwT7sv_F7HWr12HpVEzVe/view)|e4e|
+|[shape_predictor_68_face_landmarks.dat](https://drive.google.com/file/d/1HKmjg6iXsWr4aFPuU0gBXPGR83wqMzq7/view)|PTI|
+
