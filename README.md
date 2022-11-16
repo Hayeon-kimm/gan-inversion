@@ -37,4 +37,50 @@ docker run -it --name [컨테이너 이름] --gpus all -v [git clone한 디렉�
 |[mtcnn.tar.gz](https://drive.google.com/file/d/1tJ7ih-wbCO6zc3JhI_1ZGjmwXKKaPlja/view)|hyperstyle|
 |[ResNet-34 Model](https://github.com/yuval-alaluf/hyperstyle)|hyperstyle|
 
+'''
+#[e4e train.py] train 할때마다 new 폴더가 생기므로 새로 학습시에 new 폴더를 삭제(rm -rf new)하고 시작해야합니다.
+CUDA_VISIBLE_DEVICES=[gpu_num] python scripts/train.py \
+--dataset_type ffhq_encode \
+--exp_dir new/experiment/directory \
+--start_from_latent_avg \
+--use_w_pool \
+--w_discriminator_lambda 0.1 \
+--progressive_start 20000 \
+--id_lambda 0.5 \
+--val_interval 10000 \
+--max_steps 200000 \
+--stylegan_size 512 \
+--stylegan_weights pretrained_models/stylegan2-ffhq-config-f.pt \
+--workers 8 \
+--batch_size 8 \
+--test_batch_size 4 \
+--test_workers 4 
+'''
+e4e inference는 scripts/inference.py에서 gpu 번호를 변경할 수 있습니다.
+'''
+#[e4e inference.py]
+python encoder4editing/scripts/inference.py \
+--images_dir=data/my_data \
+--save_dir=results \
+pretrained_models/e4e_ffhq_encode.pt 
+'''
+
+'''
+#[hyperstyle inference.py]
+CUDA_VISIBLE_DEVICES=[gpu_num] python scripts/inference.py \
+--exp_dir=./experiment \
+--checkpoint_path=pretrained_models/hyperstyle_ffhq.pt \
+--data_path=./datasets/my_data \
+--test_batch_size=4 \
+--test_workers=4 \
+--n_iters_per_batch=5 \
+--load_w_encoder \
+--w_encoder_checkpoint_path pretrained_models/faces_w_encoder.pt
+'''
+'''
+#[run_pti.py]
+CUDA_VISIBLE_DEVICES=[gpu_num] python scripts/run_PTI.py
+'''
+
+
 
