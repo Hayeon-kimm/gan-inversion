@@ -56,7 +56,9 @@ CUDA_VISIBLE_DEVICES=[gpu_num] python scripts/train.py \
 --test_batch_size 4 \
 --test_workers 4 
 '''
+
 e4e inference는 scripts/inference.py에서 gpu 번호를 변경할 수 있습니다.
+
 '''
 #[e4e inference.py]
 python encoder4editing/scripts/inference.py \
