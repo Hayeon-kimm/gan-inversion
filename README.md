@@ -96,7 +96,7 @@ CUDA_VISIBLE_DEVICES=[gpu_num] python scripts/inference.py \
 --load_w_encoder \
 --w_encoder_checkpoint_path pretrained_models/faces_w_encoder.pt
 ```
-
+training/coach_hyperstyle.py에서 self.device로 gpu 변경 가능
 ```
 #[hyperstyle train.py]
 python scripts/train.py \
