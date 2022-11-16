@@ -59,15 +59,15 @@ CUDA_VISIBLE_DEVICES=[gpu_num] python scripts/train.py \
 
 e4e inference는 scripts/inference.py에서 gpu 번호를 변경할 수 있습니다.
 
-'''
+```
 #[e4e inference.py]
 python encoder4editing/scripts/inference.py \
 --images_dir=data/my_data \
 --save_dir=results \
 pretrained_models/e4e_ffhq_encode.pt 
-'''
+```
 
-'''
+```
 #[hyperstyle inference.py]
 CUDA_VISIBLE_DEVICES=[gpu_num] python scripts/inference.py \
 --exp_dir=./experiment \
@@ -78,11 +78,47 @@ CUDA_VISIBLE_DEVICES=[gpu_num] python scripts/inference.py \
 --n_iters_per_batch=5 \
 --load_w_encoder \
 --w_encoder_checkpoint_path pretrained_models/faces_w_encoder.pt
-'''
-'''
+```
+```
 #[run_pti.py]
 CUDA_VISIBLE_DEVICES=[gpu_num] python scripts/run_PTI.py
-'''
+```
+
+```
+#[hyperstyle inference.py]
+CUDA_VISIBLE_DEVICES=[gpu_num] python scripts/inference.py \
+--exp_dir=./experiment \
+--checkpoint_path=pretrained_models/hyperstyle_ffhq.pt \
+--data_path=./datasets/my_data \
+--test_batch_size=4 \
+--test_workers=4 \
+--n_iters_per_batch=5 \
+--load_w_encoder \
+--w_encoder_checkpoint_path pretrained_models/faces_w_encoder.pt
+```
+
+```
+#[hyperstyle train.py]
+python scripts/train.py \
+--dataset_type=ffhq_hypernet \
+--encoder_type=SharedWeightsHyperNetResNet \
+--exp_dir=experiments/hyperstyle \
+--workers=8 \
+--batch_size=8 \
+--test_batch_size=8 \
+--test_workers=8 \
+--val_interval=5000 \
+--save_interval=10000 \
+--lpips_lambda=0.8 \
+--l2_lambda=1 \
+--id_lambda=0.1 \
+--n_iters_per_batch=5 \
+--max_val_batches=150 \
+--output_size=1024 \
+--load_w_encoder \
+--w_encoder_checkpoint_path pretrained_models/e4e_ffhq_encode.pt \ 
+--layers_to_tune=0,2,3,5,6,8,9,11,12,14,15,17,18,20,21,23,24
+```
 
 
 
